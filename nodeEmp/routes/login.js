@@ -30,6 +30,7 @@ const loginMiddleware = (req, res, next) => {
     "' AND password = '" +
     req.body.loginUser.password +
     "' AND mis_work_status_id = 1";
+
   //res.send(sGetEmp);
   condb.query(sGetEmp, function (err, result) {
     if (err) throw result;

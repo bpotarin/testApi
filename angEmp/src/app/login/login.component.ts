@@ -11,6 +11,7 @@ import { TodoService } from 'src/app/service/todo.service';
 export class LoginComponent implements OnInit {
   //username="";
   //password="";
+  sToken = '';
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {}
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
     //console.log(JSON.stringify(formLogin.value));
     this.todoService.checkLogin(formLogin.value).subscribe((data) => {
       console.log(data);
+      this.sToken = data;
     });
 
     //console.log(this.todoService.checkLogin(formLogin.value));
