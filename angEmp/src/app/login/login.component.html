@@ -1,0 +1,33 @@
+<div class="card-container" style="text-align: center">
+  <h1>Login</h1>
+  <form #formLogin="ngForm" novalidate>
+    <mat-form-field class="example-full-width">
+      <mat-label>username</mat-label>
+      <input
+        matInput
+        id="username"
+        name="username"
+        ngModel
+        required
+        #username="ngModel"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <mat-label>password</mat-label>
+      <input
+        matInput
+        id="password"
+        name="password"
+        type="password"
+        ngModel
+        required
+        #password="ngModel"
+      />
+    </mat-form-field>
+  </form>
+
+  <button mat-stroked-button color="primary" (click)="login(formLogin)">
+    Login
+  </button>
+</div>
